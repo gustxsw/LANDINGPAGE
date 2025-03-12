@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Paleta de cores */
 :root {
   --dourado-suave: #c7ae6a;
@@ -165,8 +177,9 @@ h2 {
 .plano-card {
   background: var(--bege-sofisticado);
   color: var(--preto);
-  width: 320px;
-  padding: 30px;
+  width: 100%;
+  max-width: 360px;
+  padding: 20px;
   border-radius: 16px;
   font-weight: bold;
   text-align: center;
@@ -371,57 +384,45 @@ h2 {
 
 /* Responsividade para telas pequenas (celulares) */
 @media (max-width: 480px) {
-  .planos {
-    padding: 40px 15px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
+  .plano-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .plano-card {
-    width: 100%;
-    padding: 20px;
-    border-radius: 12px;
+    width: 90%;
+    max-width: 320px;
+    padding: 15px;
+    border-radius: 10px;
   }
 
   .plano-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
 
   .plano-card li {
-    font-size: 0.9rem;
-    padding: 6px 0;
+    font-size: 0.85rem;
   }
 
   .preco-promocao {
-    font-size: 1.6rem;
-    padding: 6px 12px;
-  }
-
-  .preco-antigo {
-    font-size: 1rem;
-  }
-
-  .card-buttons {
-    gap: 8px;
+    font-size: 1.5rem;
+    padding: 5px 10px;
   }
 
   .botao-plano,
   .btn-preview {
-    padding: 10px 12px;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 8px 10px;
   }
 
-  /* Ajuste no selo "Mais Vendido" */
   .selo {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-    top: -10px;
+    font-size: 0.8rem; /* Reduz um pouco o tamanho da fonte */
+    padding: 5px 10px; /* Diminui o preenchimento interno */
+    top: -8px; /* Ajusta a posição para não sobrepor muito o card */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px; /* Mantém o formato arredondado */
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
   }
 }
 

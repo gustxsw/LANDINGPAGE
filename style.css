@@ -32,6 +32,30 @@ body {
   scroll-behavior: smooth; /* Rolagem suave */
 }
 
+.desconto {
+  background: var(--dourado-suave, #c7ae6a); /* Cor principal */
+  color: var(--cinza-escuro, #333); /* Texto escuro para contraste */
+  font-size: 0.9rem; /* Texto menor e discreto */
+  font-weight: 600;
+  text-align: center;
+  padding: 6px 0; /* Altura fina */
+  width: 100%; /* Ocupa toda a largura */
+  position: absolute; /* Fixa no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que fique sobre outros elementos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+/* 🔹 Ajuste no mobile para manter a legibilidade */
+@media (max-width: 768px) {
+  .desconto {
+    font-size: 0.8rem;
+    padding: 5px 0;
+  }
+}
+
 /* Hero section */
 .hero {
   background: var(--cinza-escuro);
